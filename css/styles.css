@@ -415,13 +415,11 @@ nav {
   align-items: center;
   justify-content: center;
   padding: 0;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icons-item {
   width: 40px;
   height: 40px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icons-link {
@@ -434,7 +432,7 @@ nav {
   height: 100%;
   background-color: var(--primary-band-color);
   color: var(--subtle-text-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icons {
@@ -462,9 +460,9 @@ nav {
 }
 
 .customers-list-item {
-  /* width: 168px; */
+  width: 168px;
   height: 88px;
-  width: calc((100% - 120px) / 6);
+  /* width: calc((100% - 120px) / 6); */
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -504,11 +502,10 @@ nav {
 
 .project-item-link {
   display: block;
-  cursor: pointer;
+  /* cursor: pointer; */
   box-shadow: none;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .project-item-link:focus,
 .project-item-link:hover {
@@ -533,6 +530,12 @@ nav {
 
 .project-item-link:hover .projects-overlay-text,
 .project-item-link:focus .projects-overlay-text {
+  background-color: var(--primary-band-color);
+  transform: translateY(0%);
+}
+
+.project-item:hover .projects-overlay-text,
+.project-item:focus .projects-overlay-text {
   background-color: var(--primary-band-color);
   transform: translateY(0%);
 }

@@ -283,8 +283,6 @@ nav {
   border: 1px solid rgba(231, 233, 252, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-
 }
 
 .filter-button:active {
@@ -297,7 +295,7 @@ nav {
 .filter-button:hover,
 .filter-button:focus {
   border: 1px solid transparent;
-  border-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* specialty styles */
@@ -336,6 +334,7 @@ nav {
   justify-content: center;
   margin-bottom: 8px;
   padding: 24px 100px;
+  border-radius: 4px;
 }
 
 .header-three {
@@ -412,7 +411,7 @@ nav {
 
 .team-icons-list {
   display: flex;
-  gap: 16px;
+  gap: 24px;
   align-items: center;
   justify-content: center;
   padding: 0;
@@ -421,6 +420,7 @@ nav {
 .team-icons-item {
   width: 40px;
   height: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icons-link {
@@ -473,15 +473,21 @@ nav {
   width: 100%;
   height: 100%;
   fill: var(--subtle-text-color);
+  color: var(--subtle-text-color);
   border: 1px solid var(--subtle-text-color);
   border-radius: 4px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover,
 .customers-link:focus {
   fill: var(--pressed-state-color);
+  color: var(--pressed-state-color);
   border-color: var(--pressed-state-color);
+}
+
+.customers-icons {
+  color: currentColor;
 }
 
 /* projects styles */
@@ -494,19 +500,6 @@ nav {
   overflow: hidden;
 }
 
-.projects-overlay {
-  position: absolute;
-  display: flex;
-  width: 360px;
-  height: 100%;
-  top: 0;
-  left: 0;
-
-  transform: translateY(100%);
-  transition-property: transform, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .project-item-link {
   display: block;
@@ -514,7 +507,7 @@ nav {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-item:hover .projects-overlay {
+.project-item-link:hover .projects-overlay-text {
   background-color: var(--primary-band-color);
   transform: translateY(0%);
 }
@@ -526,11 +519,17 @@ nav {
 
 .projects-overlay-text {
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--light-color);
   padding: 40px 32px 164px 32px;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-container {

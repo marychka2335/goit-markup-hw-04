@@ -457,12 +457,14 @@ nav {
   gap: 24px;
   align-items: center;
   justify-content: center;
+  width: calc((100% - 120px) / 6);
+
 }
 
 .customers-list-item {
   width: 168px;
   height: 88px;
-  /* width: calc((100% - 120px) / 6); */
+  width: calc((100% - 120px) / 6);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -531,12 +533,10 @@ nav {
 .project-item-link:hover .projects-overlay-text,
 .project-item-link:focus .projects-overlay-text {
   background-color: var(--primary-band-color);
-  transform: translateY(0%);
 }
 
 .project-item:hover .projects-overlay-text,
 .project-item:focus .projects-overlay-text {
-  background-color: var(--primary-band-color);
   transform: translateY(0%);
 }
 

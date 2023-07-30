@@ -86,13 +86,7 @@ img {
   display: flex;
   margin: auto;
   align-items: center;
-
 }
-
-/* .header-nav {
-  display: flex;
-  align-items: center;
-} */
 
 .header-style .menu-link {
   color: var(--dark-color);
@@ -353,10 +347,6 @@ nav {
 }
 
 /* business style */
-/* .business-list-container {
-  padding: 0;
-  margin: auto;
-} */
 
 .business .header-two {
   margin-bottom: 72px;

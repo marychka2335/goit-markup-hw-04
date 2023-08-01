@@ -531,7 +531,7 @@ nav {
 .project-item-link:hover .projects-overlay-text,
 .project-item-link:focus .projects-overlay-text {
   background-color: var(--primary-band-color);
-  transform: translateY(0%);
+  transform: translateY(0);
 }
 
 .projects-container {

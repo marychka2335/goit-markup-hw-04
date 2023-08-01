@@ -453,6 +453,7 @@ nav {
 }
 
 .customers-list {
+  padding-left: 0px;
   display: flex;
   gap: 24px;
   align-items: center;

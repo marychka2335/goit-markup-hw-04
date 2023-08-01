@@ -531,10 +531,6 @@ nav {
 .project-item-link:hover .projects-overlay-text,
 .project-item-link:focus .projects-overlay-text {
   background-color: var(--primary-band-color);
-}
-
-.project-item:hover .projects-overlay-text,
-.project-item:focus .projects-overlay-text {
   transform: translateY(0%);
 }
 

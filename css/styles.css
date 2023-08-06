@@ -458,6 +458,7 @@ nav {
   gap: 24px;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 
 .customers-list-item {
@@ -642,6 +643,7 @@ nav {
   align-items: center;
   justify-content: center;
   padding: 0;
+  margin: 0;
 }
 
 .footer-icons-item {
